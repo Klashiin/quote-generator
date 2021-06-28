@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <quote-page frase="Passei no Senai krl *-*"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import QuotePage from './components/QuotePage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    QuotePage
   }
 }
 </script>
