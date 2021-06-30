@@ -1,17 +1,26 @@
 <template>
-  <div class="quote">
-    <img alt="Foto de Charles Chaplin" src="../assets/charles-chaplin.jpeg">
-    <br><button class="button">QUOTE</button>
-    <h1>{{ frase }}</h1>
-    <p>- Charles Chaplin</p>
+  <div>
+    <img alt="Foto de Charles Chaplin" :src="imagem">
+    <h1>{{`"${quote}"`}}</h1>
+    <h2>- {{ autor }}</h2>
+    <br><button v-on:click="generate()" class="button">QUOTE</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'QuotePage',
-  props: {
-    frase: String
+  data: () => ({
+    quote: 'Passei no Senai krl *-*',
+    imagem: 'https://br.web.img2.acsta.net/c_310_420/pictures/14/12/29/17/16/351479.jpg',
+    autor: 'Charles Chaplin'
+  }),
+  methods: {
+    generate() {
+      this.quote = 'SHABOOYA ROLL CALL'
+      this.imagem = 'https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters_opt/p-its-always-sunny-in-philadelphia-danny-devito.jpg'
+      this.autor = 'Frank Reynolds'
+    }
   }
 }
 </script>

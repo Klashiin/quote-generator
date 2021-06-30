@@ -1,5 +1,5 @@
 <template>
-  <quote-page frase="Passei no Senai krl *-*"/>
+  <quote-page/>
 </template>
 
 <script>
