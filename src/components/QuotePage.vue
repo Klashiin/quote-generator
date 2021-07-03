@@ -1,25 +1,29 @@
 <template>
   <div>
-    <img alt="Foto de Charles Chaplin" :src="imagem">
-    <h1>{{`"${quote}"`}}</h1>
-    <h2>- {{ autor }}</h2>
-    <br><button v-on:click="generate()" class="button">QUOTE</button>
+    <img alt="Foto de autor" :src="currQuote.imagem" class="img">
+    <h1>"{{currQuote.frase}}"</h1>
+    <h2>- {{ currQuote.autor }}</h2>
+    <br><button v-on:click="generate()" class="btn btn-primary">QUOTE</button>
   </div>
 </template>
 
 <script>
+import quote from "../quote.js"
 export default {
   name: 'QuotePage',
   data: () => ({
-    quote: 'Passei no Senai krl *-*',
-    imagem: 'https://br.web.img2.acsta.net/c_310_420/pictures/14/12/29/17/16/351479.jpg',
-    autor: 'Charles Chaplin'
+    currQuote: quote[Math.floor(Math.random() * quote.length)],
   }),
   methods: {
+    randomize() {
+      this.currQuote = quote[Math.floor(Math.random() * quote.length)]
+    },
     generate() {
-      this.quote = 'SHABOOYA ROLL CALL'
-      this.imagem = 'https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters_opt/p-its-always-sunny-in-philadelphia-danny-devito.jpg'
-      this.autor = 'Frank Reynolds'
+      let lastQuote = this.currQuote;
+      this.randomize();
+      while(this.currQuote == lastQuote){
+        this.randomize();
+      }
     }
   }
 }
@@ -41,7 +45,7 @@ li {
 a {
   color: #42b983;
 }
-.button {
+.btn {
   background-color: #4CAF50;
   border: 4px solid #4CAF50;
   color:#ffffff;
@@ -52,8 +56,14 @@ a {
   font-size: 20px;
   transition-duration: 0.4s;
 }
-.button:hover {
+.btn:hover {
   background-color: #ffffff;
   color: #4CAF50;
+}
+.img {
+  height: 200px;
+  width: 200px;
+  object-fit:cover;
+  border-radius: 50%;
 }
 </style>
