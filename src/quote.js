@@ -12,7 +12,7 @@ const quote = [
     },
     {
         frase: 'A maior glória de viver não está em nunca cair, mas em nos levantar toda vez que caímos',
-        imagem: 'https://lh3.googleusercontent.com/proxy/uZF1Vx5ooXTHCRZfNtm6PforWyuEbOhnZGSBpC27qhF5JX956k_IOztB6c74CnvT5cAcK7rb6hhqvYPF-fyZjC6g',
+        imagem: 'https://ep01.epimg.net/elpais/imagenes/2018/07/17/album/1531828042_969782_1531901269_noticia_normal.jpg',
         autor: 'Nelson Mandela'
     },
     {
@@ -47,7 +47,7 @@ const quote = [
     },
     {
         frase: 'Aprendi que a coragem não é a ausência de medo, mas o triunfo sobre isso.',
-        imagem: 'https://lh3.googleusercontent.com/proxy/uZF1Vx5ooXTHCRZfNtm6PforWyuEbOhnZGSBpC27qhF5JX956k_IOztB6c74CnvT5cAcK7rb6hhqvYPF-fyZjC6g',
+        imagem: 'https://ep01.epimg.net/elpais/imagenes/2018/07/17/album/1531828042_969782_1531901269_noticia_normal.jpg',
         autor: 'Nelson Mandela'
     },
 ]
